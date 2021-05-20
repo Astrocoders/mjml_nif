@@ -10,5 +10,5 @@ path = "src/lib.rs"
 crate-type = ["dylib"]
 
 [dependencies]
-rustler = "0.22.0-rc.0"
+rustler = { git = "https://github.com/rusterlium/rustler" }
 mrml = "1.0.0"

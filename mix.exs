@@ -9,7 +9,7 @@ defmodule Mjml.MixProject do
       version: "1.0.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      compilers: [:rustler] ++ Mix.compilers(),
+      compilers: Mix.compilers(),
       rustler_crates: [mjml_nif: []],
       name: "mjml",
       description: description(),
@@ -31,7 +31,7 @@ defmodule Mjml.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.21"},
+      {:rustler, git: "https://github.com/rusterlium/rustler", sparse: "rustler_mix"},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false}
     ]
   end
